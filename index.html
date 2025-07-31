@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Showing my love</title>
+        <style>
+            h1{
+                color: navy;
+                font-size: 500px;
+                margin-bottom: 0.2rem; /* Tighten space below heading */
+                margin-top: 1rem;
+            }
+            body{
+                background-color: palevioletred;
+            }
+            h3{
+                font-size: 32px;
+            }
+            img{
+                display: block;
+                margin-top: 0; /* Remove space above image */
+            }
+            a{
+                font-size: 20px;
+                margin-top: 0; /* Remove space above image */
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>scroll :)</h3>
+        <h1>I Love You Most.</h1>
+
+        <!-- The clickable link -->
+        <a href="#" id="showImageLink" onclick="showImage(event)"> Click me </a>
+
+        <!-- Hidden image -->
+        <img id="hiddenImage" src="https://m.media-amazon.com/images/I/51lH3MVH3jL._SY342_.jpg" alt="Revealed Image" style="display: none;">
+
+    <script>
+        function showImage(event) {
+        event.preventDefault(); // prevent the link from navigating
+
+        // Hide the link
+        document.getElementById("showImageLink").style.display = "none";
+
+        // Show the image
+        document.getElementById("hiddenImage").style.display = "block";
+        }
+    </script>
+    </body>
+</html>
